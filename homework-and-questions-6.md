@@ -1,21 +1,24 @@
 # Homework Questions 6 (Homework part 2)
 
 
-1. What does `responsive web design` do for `web pages`?
+1. Responsive web design, also called RWD design, describes a modern web design approach that allows websites and pages to render (or display) on all devices and screen sizes by automatically adapting to the screen, whether it's a desktop, laptop, tablet, or smartphone.
 
-2. ***What*** does `responsive design` ***use***?
+2. Designers size elements in relative units (%) and apply media queries, so their designs can automatically adapt to the browser space to ensure content consistency across devices.
 
-3. ***When*** is `web design` ***considered*** `responsive web design`?
+3. When the design and development should respond to the user's behavior and environment based on screen size, platform and orientation. The practice consists of a mix of flexible grids and layouts, images and an intelligent use of CSS media queries.
 
-4. ***How does*** `responsive web design` ***make*** the ***best*** `user experience` for ***everyone***? Give three reasons.
+4. Attract a wider audience. Your audience will access your website from a variety of different devices in all shapes and sizes.Easier to maintain. 
+Boost for SEO.
 
-5. What ***basically*** is a `CSS media query` and ***what*** does it ***use*** and ***why***?
+5. Media queries are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser viewport width).
 
-6. ***Where*** will we be ***using*** `media queries` on our `portfolio site`? And ***why***?
+6. One is in the site navigation, and the other will be in our CSS Grid columns containing our images on our portfolio page. 
 
-7. ***Please provide*** an `example` of a `CSS media query` using ***actual*** `CSS code`. ***Use*** the `media query` we ***use*** for our `site navigation` in our `portfolio site`.
 
-8.  Please ***provide*** an `example` of a `CSS media query` using ***actual*** `CSS code`. Use the `media query` we use for our `CSS Grid columns` in the `portfolio.html` ***page***.
+7.
+
+
+       
 
 9. **When** are `CSS media queries` ***useful***?
 
