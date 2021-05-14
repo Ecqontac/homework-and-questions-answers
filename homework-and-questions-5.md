@@ -1,14 +1,15 @@
 # Homework Questions 5 (Homework part 2)
 
-1. What ***basically*** is the `CSS Box Model`, and ***what*** does it ***consist*** of (refer to example on [w3schools](https://www.w3schools.com/css/css_boxmodel.asp) and to the [The CSS Box Model And Document Flow](https://github.com/interglobalmedia/css-box-model-document-flow/blob/master/css-box-system-document-flow.md))? Please ***describe*** what `each part` ***consists*** of. There ***should be*** `4` ***parts***. Please ***also*** tell me ***where*** you can ***actually*** `find` a ***"live"*** `diagram` of it (***don't use*** the `w3schools` ***example***).
+1. In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
 
-2. ***When*** we ***set*** the `width` and `height` of an `element` with `CSS`, ***what part*** of the `CSS Box Model` are we ***actually*** `setting` the `width` and `height` ***of***?
+2. you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 
-3. ***What*** do we ***need*** to ***know*** in ***order*** to ***set*** the `width` and `height` of an `element` ***correctly*** `across browsers`?
+3. It is important to note that when we set the width and height properties of an element with CSS, we just set the width and height of the content area. To        calculate the full size of an element, we must also add padding, borders and margins.
 
-4. ***What*** must we ***also add*** (***not*** in the `CSS code` ***but*** for ***ourselves***) in ***order*** to ***calculate*** the `full size` of an `element`?
+4. width + padding + border = actual width of an element<article>
+   height + padding + border = actual height of an element
 
-5. ***Consider*** the ***following*** `CSS`:
+5. 592px
 
 ```css
 div {
@@ -20,9 +21,8 @@ div {
 }
 ```
 
-***Based*** on the `CSS` ***above***, ***what*** would be the ***actual*** `width` of the `div`?
 
-6. ***Consider*** the ***following*** `CSS`:
+6.  592px
 
 ```css
 div {
@@ -34,17 +34,29 @@ div {
 }
 ```
 
-***Based*** on the `CSS` ***above***, ***what*** would be the ***actual*** `height` of the `div`?
 
-7. ***What*** does the `box-sizing` ***property*** `allow us` to ***include*** and ***what*** does it ***define***?
 
-8. ***Please list*** the `values` the `box-sizing property` ***accepts*** and what ***each*** `value` ***does***?
+7. The box-sizing property allows us to include the padding and border in an element's total width and height.
 
-9. ***Which*** `box-sizing property` ***value*** is ***best*** to ***use*** in my `CSS reset` and ***why***?
+8.
++ `static`
++ `absolute`
++ `fixed`
++ `relative`
++ `sticky`
++ `initial`
++ `inherit`
 
-10. By ***default***, ***how*** is the `width` and `height` of an `element` ***calculated***? And ***does*** the `element` ***always*** `appear` as its ***actual*** `size`? ***Why***?
+9.
++ `initial`
++ `inherit`
 
-11. ***What happens*** `when` we ***set*** the `box-sizing: border-box;` ***property declaration*** on an` element`?
+10. width + padding + border = actual width of an element<article>
+    height + padding + border = actual height of an element
+    
+    and the answer is no 
+
+11. By adding the property declaration box-sizing: border-box; to the universal selector rule set, all elements on the page are targeted, and padding and border are     included in all their widths and heights.
 
 12. ***Consider*** the ***following*** `CSS`:
 
@@ -56,20 +68,37 @@ div {
 }
 ```
 
-***What*** does ***this*** `CSS` ***represent***? Please ***explain*** what ***each part*** of ***this*** `rule set` ***represents***, and ***what*** it ***does***. Please ***include*** the `CSS selector` ***itself*** in the ***explanation***.
+adding the property declaration box-sizing: border-box; to the universal selector rule set, all elements on the page are targeted, and padding and border are included in all their widths and heights.
 
-13. What is `Flow Layout` (***aka*** `Normal Flow`)? Please ***explain***.
+Many browsers already use box-sizing: border-box; for many form elements (but not all - which is why inputs and text areas look different at width: 100%;).
 
-14. ***What happens*** when an `element` is ***taken out*** of the `normal flow`? And ***how*** does that ***happen***?
+Applying box-sizing: border-box is safe and smart.
 
-15. ***What*** does the `position property` ***do***? And ***what*** does it ***specify***?
+Padding: Clears an area around the content. The padding is transparent.
 
-16. ***What*** `property-specific` ***values*** can be ***applied*** to the `position property`? Please ***list*** them and `describe` ***each one***. Please ***don't include*** `values` which can be ***used*** on ***any*** `CSS property`. Please ***also provide*** an `example` of ***each*** `property` with a `property declaration`.
+Margin: Clears an area outside the border. The margin is transparent.
+
+13. Normal Flow, or Flow Layout, is the way that Block and Inline elements are displayed on a page before any changes are made to their layout. The flow is    essentially a set of things that are all working together and know about each other in your layout. Once something is taken out of flow it works independently.
+
+14. When taking an item out of flow with positioning, you will need to manage the possibility of content overlapping. Out of flow essentially means that the other elements on your page no longer know that element exists so will not respond to it.
+
+15. position property is used to specify how the element will be displayed on the page. The top, right, bottom, and left CSS position properties determine the final location of the element. Note these properties only work if the position property is already established.
+
+16. 
+   ## static: The default value. Elements render in order, as they appear in the document flow. Static postioned elements are NOT affected by the top, bottom, left, and right properties. An element with position: static; is not positioned in any special way. It is always positioned according to the normal flow of the page.
+
+  ## absolute: The element is positioned relative to its nearest positioned (not static) ancestor element (instead of positioned relative to the viewport, like fixed).If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+  ## fixed: The element is positioned relative to the viewport (browser window). This means that it always stays in the same place, even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. A fixed element does not leave a gap in the page where it would normally have been located.
+  
+  ## relative: The element is positioned relative to its normal position, so left: 25px adds 25px to the element's LEFT position.Setting the top, right, bottom and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
 
 17. ***When*** `applying` a `position property declaration` on an `element`, ***which*** `properties` can ***also*** be ***applied***? There are ***six***. Please ***describe*** them and ***what*** they ***do*** along with the `position property`. Please also include ***how*** they `work` ***depending*** on the `position` ***value***. Please ***refer*** to the `slide decks` ***specifically related*** to ***these*** `properties`. Please ***also provide*** an `example` of ***each*** `property` ***with*** a `property declaration`.
 
-18. ***How*** is the `stack order` of `elements` ***determined*** in the `context` of the `value` of the `CSS positioning z-index property`? ***Use*** the `z-index` ***number value*** as a ***reference***.
+18. The z-index property specifies the stack order of an element.
 
-19. ***What happens*** if ***two*** `positioned elements` overlap ***without*** a ***specified*** `z-index`?
+An element with greater stack order is always in front of an element with a lower stack order.
 
-20. ***What*** does `Fluid Design` ***mean***? And ***what*** does `Fixed Design` ***mean***? Please ***provide*** an `example` of ***each*** using `CSS`.
+19. Absolutely positioned elements overlap each other. All sorts of reasons. Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top)
+
+20. A fluid layout is a type of webpage design in which layout of the page resizes as the window size is changed. This is accomplished by defining areas of the page using percentages instead of fixed pixel widths. By using percentages, the content can expand or shrink to fit the window of the user's computer
